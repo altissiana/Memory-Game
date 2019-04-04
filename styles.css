@@ -30,7 +30,7 @@ img {
 }
 
  #carddiv{
-     width: 1400px;;
+     width: 1400px;
      background-color: lightblue;
      display: flex;
      flex-direction: row;
@@ -38,10 +38,6 @@ img {
      justify-content: space-evenly;   
      
  }
-
-.show {
-    visibility: visible;
-}
 
 .buttonbox{
     width: 200px;
