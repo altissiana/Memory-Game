@@ -8,45 +8,34 @@ html {
  }
 
  #maincontainer {
-     background-color: tan;
+     border: 2px solid grey;
      width: 100%;
-     
+     background-color: lightblue;
      
 }
 
 img {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
     border: 1px solid black;
-
-    
 
 }
 
-.card {
-    background-color: yellow;
-    width: 200px;
-    height: 300px;
-    border: 1px solid black;
-    
+.card { 
+    width: 150px;
+    height: 250px;
+    border: 1px solid black;  
 }
+
  #carddiv{
      width: 1200px;;
      background-color: lightblue;
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
-     justify-content: space-evenly;
-     
-     
+     justify-content: space-evenly;   
      
  }
-
-#elf1 , #elf2{
-      
-}
-
-
 
 .show {
     visibility: visible;
@@ -57,9 +46,3 @@ img {
     height: 400px;
 }
 
-.front {
-    
-}
-.back {
-    
-}
