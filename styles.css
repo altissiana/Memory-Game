@@ -11,28 +11,16 @@ html {
      background-color: tan;
      width: 100%;
      
+     
 }
 
 img {
     width: 200px;
     height: 300px;
     border: 1px solid black;
+
     
 
-}
- #carddiv{
-     width: 100%;
-     height: 1200px;
-     background-color: lightblue;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-around;
-     
-     
- }
-
-#elf1 , #elf2{
-      
 }
 
 .card {
@@ -41,8 +29,24 @@ img {
     height: 300px;
     border: 1px solid black;
     
-    
 }
+ #carddiv{
+     width: 1200px;;
+     background-color: lightblue;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     
+     
+     
+ }
+
+#elf1 , #elf2{
+      
+}
+
+
 
 .show {
     visibility: visible;
