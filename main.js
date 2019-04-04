@@ -16,9 +16,9 @@ var card9 = `<img src="assets/card-9.jpg"  class="elf" value="1">`
 var dankArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9,
     card1, card2, card3, card4, card5, card6, card7, card8, card9];
 
-var randomize = Math.floor(Math.random()*dankArr.length);
-
-
+var randomize = Math.floor(Math.random()*dankArr.length)
+var rando= dankArr[randomize].pop()
+console.log(rando)
 
 $(this).on('click', function(a){
     
