@@ -1,5 +1,4 @@
 
-
 var checkArr = [];
 
 var card1 = `<img src="assets/card-1.jpeg" class="cena" value="1">`
@@ -11,7 +10,6 @@ var card6 = `<img src="assets/card-6.jpg"  class="bee" value="2">`
 var card7 = `<img src="assets/card-7.jpg"  class="spongebob" value="1">`
 var card8 = `<img src="assets/card-8.jpeg" class="satan" value="2">`
 var card9 = `<img src="assets/card-9.jpg"  class="elf" value="1">`
-
 
 var dankArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9,
     card1, card2, card3, card4, card5, card6, card7, card8, card9];
@@ -38,15 +36,11 @@ function shuffle(array) {
   var newArr = shuffle(dankArr);
   console.log(newArr);
 
-// var randomize = Math.floor(Math.random()*dankArr.length);
-
-
 
 $(this).on('click', function(a){
     
     $('.card').flip()
     console.log($(a.target).attr('value'))
-    // console.log($(b.target).attr('value'))
     
 })
 
@@ -68,5 +62,4 @@ back15.innerHTML = newArr[14];
 back16.innerHTML = newArr[15];
 back17.innerHTML = newArr[16];
 back18.innerHTML = newArr[17];
-
 
