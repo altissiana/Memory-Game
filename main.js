@@ -1,15 +1,14 @@
 
-var checkArr = [];
 
 var card1 = `<img src="assets/card-1.jpeg" class="cena" value="1">`
 var card2 = `<img src="assets/card-2.jpg"  class="jimmy" value="2">`
-var card3 = `<img src="assets/card-3.jpg"  class="jerry" value="1">`
-var card4 = `<img src="assets/card-4.jpeg" class="catface" value="2">`
-var card5 = `<img src="assets/card-5.jpg"  class="hank" value="1">`
-var card6 = `<img src="assets/card-6.jpg"  class="bee" value="2">`
-var card7 = `<img src="assets/card-7.jpg"  class="spongebob" value="1">`
-var card8 = `<img src="assets/card-8.jpeg" class="satan" value="2">`
-var card9 = `<img src="assets/card-9.jpg"  class="elf" value="1">`
+var card3 = `<img src="assets/card-3.jpg"  class="jerry" value="3">`
+var card4 = `<img src="assets/card-4.jpeg" class="catface" value="4">`
+var card5 = `<img src="assets/card-5.jpg"  class="hank" value="5">`
+var card6 = `<img src="assets/card-6.jpg"  class="bee" value="6">`
+var card7 = `<img src="assets/card-7.jpg"  class="spongebob" value="7">`
+var card8 = `<img src="assets/card-8.jpeg" class="satan" value="8">`
+var card9 = `<img src="assets/card-9.jpg"  class="elf" value="9">`
 
 var dankArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9,
     card1, card2, card3, card4, card5, card6, card7, card8, card9];
@@ -34,16 +33,30 @@ function shuffle(array) {
   }
   
   var newArr = shuffle(dankArr);
-  console.log(newArr);
 
-
-$(this).on('click', function(a){
+  $('.card').flip()
+ 
+  $(this).on('click', function(a){
+    console.log($(this).attr('value'))
+    console.log('test');
+  });
     
-    $('.card').flip()
-    console.log($(a.target).attr('value'))
-    
-})
 
+
+
+  // var checkArr = '';
+
+  // function checkValue(dankArr, n) {
+  //   checkArr[n]=name;
+  //   if(n%2===0)
+  //   {
+  //     checkArr[n]='o'
+  //   }
+  // }
+
+
+  
+console.log(dankArr);
 back1.innerHTML = newArr[0];
 back2.innerHTML = newArr[1];
 back3.innerHTML = newArr[2];
@@ -62,4 +75,12 @@ back15.innerHTML = newArr[14];
 back16.innerHTML = newArr[15];
 back17.innerHTML = newArr[16];
 back18.innerHTML = newArr[17];
+
+
+
+
+
+
+
+
 
