@@ -46,7 +46,7 @@ function checkForMatch() {
    livesdiv.innerHTML = lives;
    if (lives === 0) {
      doh.play();
-     alert('game over');
+     alert('TRY AGAIN BOZZO');
      location.reload();
    }
   
