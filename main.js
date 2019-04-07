@@ -3,6 +3,7 @@ const cards = document.querySelectorAll(".memory_card");
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let lives = 7;
 
 function flipCard() {
    if (lockBoard) return;
@@ -31,6 +32,11 @@ function checkForMatch() {
        secondCard.dataset.framework;
 
    isMatch ? disableCards() : unflipCards();
+   isMatch ? lives = lives : lives = lives - 1;
+   console.log(lives);
+   livesdiv.innerHTML = lives;
+
+
 }
 
 function disableCards() {
@@ -66,3 +72,6 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener("click", flipCard))
+
+
+livesdiv.innerHTML = lives;
