@@ -1,9 +1,17 @@
+
+
 const cards = document.querySelectorAll(".memory_card");
+const start = document.getElementById('start')
+$('button').on('click', function(){
+  document.getElementById('start').innerHTML = ''
+  document.getElementById('start').classList.remove('start')
+})
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let lives = 7;
+let doh = new Audio("assets/doh.wav");
 
 function flipCard() {
    if (lockBoard) return;
@@ -33,11 +41,18 @@ function checkForMatch() {
 
    isMatch ? disableCards() : unflipCards();
    isMatch ? lives = lives : lives = lives - 1;
+   
    console.log(lives);
    livesdiv.innerHTML = lives;
-
+   if (lives === 0) {
+     doh.play();
+     alert('game over');
+     location.reload();
+   }
+  
 
 }
+
 
 function disableCards() {
    firstCard.removeEventListener("click", flipCard);
