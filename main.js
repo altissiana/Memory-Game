@@ -1,4 +1,9 @@
 const cards = document.querySelectorAll(".memory_card");
+const start = document.getElementById('start')
+$('button').on('click', function(){
+  document.getElementById('start').innerHTML = ''
+  document.getElementById('start').classList.remove('start')
+})
 
 let hasFlippedCard = false;
 let lockBoard = false;
