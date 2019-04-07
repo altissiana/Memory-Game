@@ -1,38 +1,68 @@
-var checkArr = [];
+const cards = document.querySelectorAll(".memory_card");
 
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
-function shuffle(array) {
- var currentIndex = array.length, temporaryValue, randomIndex;
+function flipCard() {
+   if (lockBoard) return;
+   if (this === firstCard) return;
 
- // While there remain elements to shuffle...
- while (0 !== currentIndex) {
+   this.classList.add("flip");
 
-   // Pick a remaining element...
-   randomIndex = Math.floor(Math.random() * currentIndex);
-   currentIndex -= 1;
+   if (!hasFlippedCard) {
+       //first click
+       hasFlippedCard = true;
+       firstCard = this;
 
-   // And swap it with the current element.
-   temporaryValue = array[currentIndex];
-   array[currentIndex] = array[randomIndex];
-   array[randomIndex] = temporaryValue;
- }
+       return;
+   }
 
- return array;
+   //second click
+   hasFlippedCard = false;
+   secondCard = this;
+
+   checkForMatch();
 }
 
 
-var card = $('.card')
-var cards = [...card]
-var cardDiv = $('#carddiv')
+function checkForMatch() {
+   let isMatch = firstCard.dataset.framework ===
+       secondCard.dataset.framework;
 
-var shuffledGame = function(){
-  var shuffled = shuffle(cards)
-  cardDiv.innerHTML = ''
-  for (i = 0; i < shuffled.length; i++){
-    [].forEach.call(shuffled, function(e){
-      document.getElementById('carddiv').appendChild(e)
-    })
-  }
+   isMatch ? disableCards() : unflipCards();
 }
-shuffledGame()
 
+function disableCards() {
+   firstCard.removeEventListener("click", flipCard);
+   secondCard.removeEventListener("click", flipCard);
+
+   resetBoard();
+}
+
+function unflipCards() {
+   lockBoard = true;
+
+   setTimeout(() => {
+       firstCard.classList.remove("flip");
+       secondCard.classList.remove("flip");
+
+       resetBoard();
+   }, 500);
+}
+
+function resetBoard() {
+   hasFlippedCard = false;
+   lockBoard = false;
+   firstCard = null;
+   secondCard = null;
+}
+
+(function shuffle() {
+   cards.forEach(card => {
+       let randomPos = Math.floor(Math.random() * 9);
+       card.style.order = randomPos;
+   })
+})();
+
+cards.forEach(card => card.addEventListener("click", flipCard))

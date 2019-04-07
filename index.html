@@ -2,50 +2,96 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Memory Game</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Game</title>
 </head>
 
 <body>
-<div id="maincontainer">
- <h1>Memory Game</h1>
+    <section class="memory_game">
 
- 
-  <div id="carddiv">
-    <div class="card"><img src="assets/card-1.jpeg" class="cena" value="1"></div>
-    <div class="card"><img src="assets/card-2.jpg"  class="jimmy" value="2"></div>
-    <div class="card"><img src="assets/card-3.jpg"  class="jerry" value="3"></div>
-    <div class="card"><img src="assets/card-4.jpeg" class="catface" value="4"></div>
-    <div class="card"><img src="assets/card-5.jpg"  class="hank" value="5"></div>
-    <div class="card"><img src="assets/card-6.jpg"  class="bee" value="6"></div>
-    <div class="card"><img src="assets/card-7.jpg"  class="spongebob" value="7"></div>
-    <div class="card"><img src="assets/card-8.jpeg" class="satan" value="8"></div>
-    <div class="card"><img src="assets/card-9.jpg"  class="elf" value="9"></div>
-    <div class="card"><img src="assets/card-1.jpeg" class="cena" value="1"></div>
-    <div class="card"><img src="assets/card-2.jpg"  class="jimmy" value="2"></div>
-    <div class="card"><img src="assets/card-3.jpg"  class="jerry" value="3"></div>
-    <div class="card"><img src="assets/card-4.jpeg" class="catface" value="4"></div>
-    <div class="card"><img src="assets/card-5.jpg"  class="hank" value="5"></div>
-    <div class="card"><img src="assets/card-6.jpg"  class="bee" value="6"></div>
-    <div class="card"><img src="assets/card-7.jpg"  class="spongebob" value="7"></div>
-    <div class="card"><img src="assets/card-8.jpeg" class="satan" value="8"></div>
-    <div class="card"><img src="assets/card-9.jpg"  class="elf" value="9"></div>
-  </div>
+        <div class="memory_card" data-framework="cena">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-1.jpeg" />
+        </div>
+        <div class="memory_card" data-framework="jimmy">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-2.jpg" />
+        </div>
+        <div class="memory_card" data-framework="jerry">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-3.jpg" />
+        </div>
+        <div class="memory_card" data-framework="catface">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-4.jpeg" />
+        </div>
+        <div class="memory_card" data-framework="hank">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-5.jpg" />
+        </div>
+        <div class="memory_card" data-framework="bee">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-6.jpg" />
+        </div>
+        <div class="memory_card" data-framework="spongebob">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-7.jpg" />
+        </div>
+        <div class="memory_card" data-framework="satan">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-8.jpeg" />
+        </div>
+        <div class="memory_card" data-framework="elf">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-9.jpg" />
+        </div>
+        <div class="memory_card" data-framework="cena">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-1.jpeg" />
+        </div>
+        <div class="memory_card" data-framework="jimmy">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-2.jpg" />
+        </div>
+        <div class="memory_card" data-framework="jerry">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-3.jpg" />
+        </div>
+        <div class="memory_card" data-framework="catface">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-4.jpeg" />
+        </div>
+        <div class="memory_card" data-framework="hank">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-5.jpg" />
+        </div>
+        <div class="memory_card" data-framework="bee">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-6.jpg" />
+        </div>
+        <div class="memory_card" data-framework="spongebob">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-7.jpg" />
+        </div>
+        <div class="memory_card" data-framework="satan">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-8.jpeg" />
+        </div>
+        <div class="memory_card" data-framework="elf">
+            <img class="back" src="assets/front.gif" />
+            <img class="front" src="assets/card-9.jpg" />
+        </div>
+    </section>
 
-</div>
+
+
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </body>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-<script src= "main.js"></script>
-
 
 </html>
