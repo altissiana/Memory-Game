@@ -48,9 +48,9 @@ function checkForMatch() {
      doh.play();
      alert('TRY AGAIN BOZZO');
      location.reload();
+
    }
   
-
 }
 
 

@@ -60,16 +60,17 @@
  }
 
  #livesdiv {
-     font-size: 60px;
-     width:100px;
-     height:100px;
-     text-align: center;
-     border: 2px solid black;
-     background-color: white;
-     margin: auto;
-     opacity: 0.8;
-     border-radius: 10%;
- }
+   font-size: 100px;
+   width:150px;
+   height:150px;
+   text-align: center;
+   background-color: white;
+   color: black;
+   margin: 10px;
+   opacity: 0.8;
+   border-radius: 10%;
+   position: fixed;
+}
 
  .start {
     width: 1200px;
