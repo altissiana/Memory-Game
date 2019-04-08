@@ -54,7 +54,7 @@ function checkForMatch() {
      alert('TRY AGAIN BOZZO');
      location.reload();
 
-   } else if (score === 2) {
+   } else if (score === 9) {
      john.play();
      alert('GOOD JOB BUDDY NOW DO IT AGAIN');
      location.reload();
@@ -63,7 +63,6 @@ function checkForMatch() {
    
   
 };
-
 
 function disableCards() {
    firstCard.removeEventListener("click", flipCard);
