@@ -81,12 +81,13 @@
     position: fixed;
     z-index: 3;
     /* background-image: url("assets/carrots.jpg"); */
-    background-color: black;
+    background-color: lightblue;
     background-size: cover;
     color: white;
     text-align: center;
     font-size: 50px;
     font-family: fantasy;
+    border-radius: 5%;
    
  }
 
@@ -97,6 +98,13 @@ h2 {
  .tenor-gif-embed {
     width: 500px;
     height: 500px;
+    margin: auto;
+ 
+ }
+
+ button {
+    width: 150px;
+    height: 60px;
  }
 
  #maincontainer {

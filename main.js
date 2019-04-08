@@ -1,8 +1,8 @@
 
-
 const cards = document.querySelectorAll(".memory_card");
 const start = document.getElementById('start')
 $('button').on('click', function(){
+  // john.play()
   document.getElementById('start').innerHTML = ''
   document.getElementById('start').classList.remove('start')
 })
@@ -15,6 +15,7 @@ let doh = new Audio("assets/doh.wav");
 let noice = new Audio("assets/noice.mp3");
 let laughitup = new Audio("assets/laughitup.mp3");
 let photograph = new Audio("assets/photograph.wav");
+// let john = new Audio ("assets/john.mp3");
 
 function flipCard() {
    if (lockBoard) return;
@@ -90,6 +91,5 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener("click", flipCard))
-
 
 livesdiv.innerHTML = lives;
