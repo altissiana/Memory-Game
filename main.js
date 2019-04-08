@@ -2,7 +2,7 @@
 const cards = document.querySelectorAll(".memory_card");
 const start = document.getElementById('start')
 $('button').on('click', function(){
-  // john.play()
+  photograph.play();
   document.getElementById('start').innerHTML = ''
   document.getElementById('start').classList.remove('start')
 })
@@ -11,11 +11,12 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let lives = 9;
+let score = 0;
 let doh = new Audio("assets/doh.wav");
 let noice = new Audio("assets/noice.mp3");
 let laughitup = new Audio("assets/laughitup.mp3");
 let photograph = new Audio("assets/photograph.wav");
-// let john = new Audio ("assets/john.mp3");
+let john = new Audio ("assets/john.mp3");
 
 function flipCard() {
    if (lockBoard) return;
@@ -44,18 +45,24 @@ function checkForMatch() {
        secondCard.dataset.framework;
 
    isMatch ? disableCards() : unflipCards();
-   isMatch ? (lives = lives, noice.play()) : (lives = lives - 1, doh.play());
+   isMatch ? (lives = lives, score = score + 1, noice.play()) : (lives = lives - 1, doh.play());
    
    console.log(lives);
    livesdiv.innerHTML = lives;
    if (lives === 0) {
-     photograph.play();
+   
      alert('TRY AGAIN BOZZO');
      location.reload();
 
-   }
+   } else if (score === 1) {
+     john.play();
+     alert('GOOD JOB BUDDY NOW DO IT AGAIN');
+     location.reload();
+
+   };
+   
   
-}
+};
 
 
 function disableCards() {
