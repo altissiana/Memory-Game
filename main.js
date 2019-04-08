@@ -54,7 +54,7 @@ function checkForMatch() {
      alert('TRY AGAIN BOZZO');
      location.reload();
 
-   } else if (score === 1) {
+   } else if (score === 2) {
      john.play();
      alert('GOOD JOB BUDDY NOW DO IT AGAIN');
      location.reload();
