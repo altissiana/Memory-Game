@@ -10,8 +10,11 @@ $('button').on('click', function(){
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let lives = 7;
+let lives = 9;
 let doh = new Audio("assets/doh.wav");
+let noice = new Audio("assets/noice.mp3");
+let laughitup = new Audio("assets/laughitup.mp3");
+let photograph = new Audio("assets/photograph.wav");
 
 function flipCard() {
    if (lockBoard) return;
@@ -40,12 +43,12 @@ function checkForMatch() {
        secondCard.dataset.framework;
 
    isMatch ? disableCards() : unflipCards();
-   isMatch ? lives = lives : lives = lives - 1;
+   isMatch ? (lives = lives, noice.play()) : (lives = lives - 1, doh.play());
    
    console.log(lives);
    livesdiv.innerHTML = lives;
    if (lives === 0) {
-     doh.play();
+     photograph.play();
      alert('TRY AGAIN BOZZO');
      location.reload();
 

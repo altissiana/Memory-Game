@@ -15,8 +15,8 @@
  }
  
  .memory_game {
-    width: 1000px;
-    height: 1000px;
+    width: 1400px;
+    height: 100%;
     margin:auto;
     display:flex;
     flex-wrap:wrap;
@@ -53,6 +53,7 @@
     backface-visibility: hidden;
     border: 1px solid lightgrey;
     background: white;
+    z-index: 0;
  }
  
  .front {
@@ -66,22 +67,40 @@
    text-align: center;
    background-color: white;
    color: black;
-   margin: 10px;
    opacity: 0.8;
    border-radius: 10%;
    position: fixed;
+   margin-right: 600px;
+   margin-bottom: 200px;
+   z-index: 1;
 }
 
  .start {
-    width: 1200px;
-    height: 2200px;
-    position: absolute;
+    width: 1550px;
+    height: 850px;
+    position: fixed;
     z-index: 3;
+    /* background-image: url("assets/carrots.jpg"); */
     background-color: black;
+    background-size: cover;
     color: white;
     text-align: center;
     font-size: 50px;
     font-family: fantasy;
+   
  }
 
- 
+h2 {
+   color: white;
+}
+
+ .tenor-gif-embed {
+    width: 500px;
+    height: 500px;
+ }
+
+ #maincontainer {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+ }
